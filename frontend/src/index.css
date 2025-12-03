@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000000;
+  --charcoal: #1A1A1A;
+  --dark-blood-red: #8B0000;
+  --soft-grey: #E0E0E0;
+  --dark-red-hover: #A00000;
+  --red-glow: rgba(139, 0, 0, 0.3);
+}
+
+body {
+  font-family: 'Crimson Text', serif;
+  background: var(--black);
+  color: var(--soft-grey);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Better touch targets for mobile */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-blood-red);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-red-hover);
+}
+
+/* Selection styling */
+::selection {
+  background: var(--dark-blood-red);
+  color: var(--soft-grey);
+}
+

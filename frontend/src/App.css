@@ -1,0 +1,35 @@
+.app {
+  min-height: 100vh;
+  background: var(--black);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Glow effect */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--red-glow);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--red-glow), 0 0 30px var(--red-glow);
+  }
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
