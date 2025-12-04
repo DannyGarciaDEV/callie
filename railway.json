@@ -1,14 +1,13 @@
 {
     "$schema": "https://railway.com/railway.schema.json",
     "build": {
-      "builder": "RAILPACK",
-      "buildCommand": "cd backend && npm install && cd ../frontend && npm install",
-      "buildEnvironment": "V3"
+      "builder": "NIXPACKS",
+      "buildCommand": "cd frontend && npm install && npm run build && cd ../backend && npm install"
     },
     "deploy": {
       "runtime": "V2",
       "numReplicas": 1,
-      "startCommand": "npm run dev",
+      "startCommand": "node backend/server.js",
       "sleepApplication": false,
       "useLegacyStacker": false,
       "multiRegionConfig": {
@@ -20,3 +19,4 @@
       "restartPolicyMaxRetries": 10
     }
   }
+  
